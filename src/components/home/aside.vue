@@ -21,7 +21,6 @@
                 <span slot="title">搜索</span>
             </el-menu-item>
         </el-menu>
-        <div class="line"></div>
     </div>
 </template>
 <script>
@@ -72,13 +71,5 @@
         text-decoration: none ;
         color: black;
         color: rgb(191, 203, 217);
-    }
-    .line{
-        position: absolute;
-        right:0;
-        top:0;
-        background:#324157;
-        width:2px ;
-        height:300px;
     }
 </style>

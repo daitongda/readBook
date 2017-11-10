@@ -2,7 +2,7 @@
 > vue project
 > 阅读书籍网站
 >
->  [项目地址](http://dtd.space/read/),搜索模块由于接口问题，请您下到本地 使用 npm run dev体验效果
+>  [项目地址](http://dtd.space/read/)
 ##  简介
     该项目采用了Vue-cli,Vuex,element组件库,Axios,服务端代理获取数据来完成前端页面的开放，设计上模仿了网上知名的阅读网站。后台采用了在git上搜索到的api接口，所以有些接口是可以直接访问的，因为服务器端在返回数据的header中设置了Access-Control-Allow-Origin，所以可以跨域的获取到数据.由于是多篇文档中的api接口，有些服务端不允许跨域，所以就采用了vue-cli中自带的小型服务器进行了服务代理去获取数据。
 ​

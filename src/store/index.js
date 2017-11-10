@@ -473,9 +473,13 @@ export default new VueX.Store({
         },
         //模糊搜索数据
         search(store,name){
-            return Axios.get('/api/book/fuzzy-search?query='+name).then(res=>{
+            return Axios.get('http://dtd.space/read/proxy.php?api=http://api.zhuishushenqi.com/book/fuzzy-search?query='+encodeURIComponent(name)).then(res=>{
+
                 var index=0;
                 function addBookRack(index){
+                    if(!res.data.books){
+                        return ;
+                    }
                     var item=res.data.books[index];
                     if(item){
                         store.dispatch('checkLocalStroage',{
