@@ -18,17 +18,17 @@
         data(){
             return {
                 obj:''
-            }
+            };
         },
         computed:{
             title(){
                 var str='我的书架';
                 if(this.$route.path.includes('recommend')){
                     str='排行版';
-                }
+                };
                 if(this.$route.path.includes('randomrecommend')){
                     str='随机推荐';
-                }
+                };
                 return str;
             }
         },

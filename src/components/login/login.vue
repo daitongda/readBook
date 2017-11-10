@@ -15,7 +15,7 @@
         name:'login',
         methods:{
             handleClick($event){
-                this.$router.push({name:$event.name})
+                this.$router.push({name:$event.name});
             }
         },
         data(){

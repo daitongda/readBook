@@ -14,7 +14,7 @@
             this.$store.dispatch('getRandomList').then(res=>{
                 this.$store.dispatch('to0');
                 this.$store.commit('closeLoading');
-            })
+            });
         },
         components:{
             bookList:bookListComponent

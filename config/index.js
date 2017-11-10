@@ -31,6 +31,9 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+      //   http://localhost:9999/api/a/b
+
+      //   http://api.zhuishushenqi.com/mix-atoc/a/b
     proxyTable: {
         '/api':{
             target: 'http://api.zhuishushenqi.com/mix-atoc/',//设置你调用的接口域名和端口号 别忘了加http

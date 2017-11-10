@@ -17,7 +17,7 @@
             return {
                 id:'',
                 passWord:''
-            }
+            };
         },
         methods:{
             handleSubmit(){
@@ -44,9 +44,9 @@
                             type:'error',
                             message:'账号或密码错误，请再次输入',
                             duration:1000
-                        })
-                    }
-                })
+                        });
+                    };
+                });
             }
         }
     }

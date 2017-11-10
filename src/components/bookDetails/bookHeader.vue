@@ -51,7 +51,7 @@
                     return this.$store.state.currentBookRecommendList.slice(0,10);
                 }else{
                     return []
-                }
+                };
             },
 
             updated(){
@@ -59,20 +59,20 @@
                     return this.$store.state.currentBookDetails.updated.slice(0,10);
                 }else{
                     return '';
-                }
+                };
             },
 
             disabledBtn(){
                 var localStr=window.localStorage.getItem('bookRack');
                 if(!localStr){
                     return false;
-                }
+                };
                 var localData=JSON.parse(localStr);
                 for(var i=0;i<localData.length;i++){
                     if(localData[i].title==this.$store.state.currentBookDetails.title){
                         return true;
-                    }
-                }
+                    };
+                };
             }
         },
         methods:{

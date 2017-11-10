@@ -367,7 +367,7 @@ export default new VueX.Store({
 
         //根据id获取本书的所有目录
         getBookChapter(store,id) {
-            return Axios.get('/api/'+id+'?view=chapters').then(res => {
+            return Axios.get('http://dtd.space/read/proxy.php?api=http://api.zhuishushenqi.com/mix-atoc/'+id+'?view=chapters').then(res => {
                 store.commit('currentBookChapterList',res.data.mixToc);
                 return res;
             })
@@ -408,7 +408,7 @@ export default new VueX.Store({
                 store.dispatch('checkLocalStroage',obj).then(res=>{
                     if(res==false){
                         localData.push(obj.data);
-                    }
+                    };
                     window.localStorage.setItem(obj.name,JSON.stringify(localData));
                 });
             };
@@ -473,7 +473,7 @@ export default new VueX.Store({
         },
         //模糊搜索数据
         search(store,name){
-            return Axios.get('/search'+name).then(res=>{
+            return Axios.get('http://dtd.space/read/proxy.php?api=http://api.zhuishushenqi.com/book/fuzzy-search?query='+name).then(res=>{
                 var index=0;
                 function addBookRack(index){
                     var item=res.data.books[index];

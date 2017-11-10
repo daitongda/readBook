@@ -29,7 +29,7 @@
             var path=this.$route.path.split('/');
             return {
                 sex:path[path.length-2]
-            }
+            };
         },
         methods:{
             //单击改变store中的性别分类
@@ -42,7 +42,7 @@
                     index:0
                 }).then(res=>{
                     this.$store.commit('closeLoading');
-                })
+                });
 
             },
             //点击分类列表某个时，重新加载书籍
@@ -52,7 +52,7 @@
                 this.$store.commit('setCurrentType',item.name);
                 //发送ajax请求获取书籍
                 this.$store.dispatch('getTypeList').then(res=>{
-                    this.$router.push('/home/recommend/'+this.$route.params.sex+'/'+index)
+                    this.$router.push('/home/recommend/'+this.$route.params.sex+'/'+index);
                     this.$store.commit('closeLoading');
                 });
             },
@@ -66,7 +66,7 @@
                     end:start+20
                 }).then(res=>{
                     this.$store.commit('closeLoading');
-                })
+                });
             }
         },
         components:{

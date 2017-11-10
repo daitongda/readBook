@@ -120,14 +120,8 @@ export default function(store){
                store.commit('updateCurrentUser',data);
                next();
            }
-
         });
-
-
-
     });
-
-
     return router;
 }
 

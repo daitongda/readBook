@@ -40,7 +40,7 @@
                 this.bookList.forEach((res,index)=>{
                     if(res.title==item.title){
                         this.$router.push(this.$route.path+'/'+index);
-                    }
+                    };
                 });
                 this.$store.dispatch('updateLastRead',{
                     name:'bookRack',
@@ -48,7 +48,7 @@
                         "_id":this.currentBookDetails["_id"],
                         lastRead:item.title
                     }
-                })
+                });
             }
         }
     }

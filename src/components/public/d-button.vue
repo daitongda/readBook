@@ -14,19 +14,17 @@
                         this.$router.push('/home/recommend/male/0/bookdetails/'+this.to);
                     }else{
                         this.$router.push(this.$route.path+'/bookdetails/'+this.to);
-                    }
-                }
-
+                    };
+                };
             }
         },
         computed:{
-
             btnType(){
                 if(this.type){
                     return this.type;
                 }else {
                     return 'default';
-                }
+                };
             }
         }
     }
@@ -38,7 +36,7 @@
         width:100%;
         height:34px;
         display: inline-block;
-        line-height:34px;
+        line-height:32px;
         -webkit-transition: .3s background-color,border-color ;
         -moz-transition: .3s background-color,border-color ;
         -ms-transition: .3s background-color,border-color ;

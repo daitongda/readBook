@@ -50,7 +50,7 @@
             this.$store.commit('loading');
             this.$store.dispatch('getLocalStroage','bookRack').then(res=>{
                 this.$store.commit('closeLoading');
-            })
+            });
         },
         methods:{
             handleEdit(item){

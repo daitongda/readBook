@@ -29,11 +29,11 @@
                 var id=this.$route.params.id;
                 this.$store.dispatch('getBookdetails',id).then(res=>{
                     return this.$store.dispatch('getBookRecommend',id).then(res=>{
-                        this.$store.commit('closeLoading');
-                        return this.$store.dispatch('getBookChapter',id);
-
-                    })
-                })
+                        return this.$store.dispatch('getBookChapter',id).then(res=>{
+                            this.$store.commit('closeLoading');
+                        });
+                    });
+                });
             }
         }
     }

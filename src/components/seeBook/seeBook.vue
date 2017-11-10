@@ -29,7 +29,7 @@
             return {
                 str,
                 onOff:''
-            }
+            };
         },
         computed:{
             currentBook(){
@@ -48,7 +48,7 @@
                         this.$store.dispatch('getChapterDetails').then(res=>{
                             this.$store.commit('closeLoading');
                         });
-                    })
+                    });
                 });
             },
             prevClick(){
@@ -64,8 +64,8 @@
                             onClose(){
                                 that.onOff='';
                             }
-                        })
-                    }
+                        });
+                    };
                 }else{
                     this.$router.push('/home/recommend/'+this.$route.params.sex+'/'+this.$route.params.fenlei+'/bookdetails/'+this.$route.params.id+'/'+num)
                     this.$store.dispatch('updateLastRead',{
@@ -74,9 +74,9 @@
                             "_id":this.$route.params.id,
                             lastRead:this.$store.state.currentBookChapterList[num].title
                         }
-                    })
+                    });
                     that.getBook();
-                }
+                };
             },
             nextClick(){
                 var num=parseInt(this.$route.params.chapter);
@@ -91,8 +91,8 @@
                             onClose(){
                                 that.onOff='';
                             }
-                        })
-                    }
+                        });
+                    };
                 }else{
                     this.$router.push('/home/recommend/'+this.$route.params.sex+'/'+this.$route.params.fenlei+'/bookdetails/'+this.$route.params.id+'/'+num);
                     this.$store.dispatch('updateLastRead',{
@@ -103,7 +103,7 @@
                         }
                     });
                     this.getBook();
-                }
+                };
             },
             backCatalog(){
                 this.$router.push('/home/recommend/'+this.$route.params.sex+'/'+this.$route.params.fenlei+'/bookdetails/'+this.$route.params.id);
@@ -111,7 +111,6 @@
         },
         created(){
             this.getBook();
-
         }
     }
 </script>

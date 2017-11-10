@@ -35,7 +35,7 @@
             defaultActive(){
                 var str='/home';
                 if(this.$route.path.includes('/home/recommend')){
-                    str='/home/recommend/male/0'
+                    str='/home/recommend/male/0';
                 }else if(this.$route.path.includes('/home/randomrecommend')){
                     str='/home/randomrecommend';
                 }else if(this.$route.path.includes('/home/booktip')){
@@ -44,7 +44,7 @@
                     str='/home/blacklist';
                 }else if(this.$route.path.includes('/home/search')){
                     str='/home/search';
-                }
+                };
                 return str;
             }
         },

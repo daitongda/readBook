@@ -45,7 +45,7 @@
 
                 if(registered.length!=0){
                     str='账号已注册';
-                }
+                };
                 return str;
 
             },
@@ -100,7 +100,7 @@
                             duration:1000
                         });
                         this.clearAll();
-                    })
+                    });
 
                 };
             }

@@ -19,7 +19,7 @@
         data(){
             return {
                 state4:''
-            }
+            };
         },
         methods:{
             handleSelect(item){
