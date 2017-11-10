@@ -2,10 +2,10 @@
 > vue project
 > 阅读书籍网站
 >
->  [项目地址](http://dtd.space/read/)
+>  [项目地址](http://dtd.space/read/),搜索模块由于接口问题，请您下到本地 使用 npm run dev体验效果
 ##  简介
     该项目采用了Vue-cli,Vuex,element组件库,Axios,服务端代理获取数据来完成前端页面的开放，设计上模仿了网上知名的阅读网站。后台采用了在git上搜索到的api接口，所以有些接口是可以直接访问的，因为服务器端在返回数据的header中设置了Access-Control-Allow-Origin，所以可以跨域的获取到数据.由于是多篇文档中的api接口，有些服务端不允许跨域，所以就采用了vue-cli中自带的小型服务器进行了服务代理去获取数据。
-​    
+​
 ## 功能
 - 登入登出
 - 书籍书架
@@ -52,7 +52,7 @@
             var users=JSON.parse(str);
             return users;
         }
-        
+
     //添加对应的cookie,obj={name:获取的cookie的名字,data:数据}
         addCookie(store,obj){
             var result;
@@ -80,7 +80,7 @@
                 }
             });
         }
-        
+
     //注入到cookie当中
         intoCookie(store,obj){
             // cookie默认为1个月后过期
@@ -93,7 +93,7 @@
             document.cookie = obj.name + "=" + JSON.stringify(obj.data) + "; " + expires+'; max-age='+(exdays/1000);
             return obj.data;
         }
-        
+
     //避免设置重复的cookie，true为有重复的，false为不重复的
         checkCookie(store,obj){
             return this.dispatch('getCookie',obj.name).then(users=>{
@@ -150,7 +150,7 @@
 
 - 使用vue中style标签scoped属性，页面的样多刷新几次有可能会造成不一样，样式有时候不会生效。
 
-    
+
 
 ## api接口
 - 获取分类详情
