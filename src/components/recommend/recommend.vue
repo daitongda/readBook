@@ -65,7 +65,9 @@
                     start:start,
                     end:start+20
                 }).then(res=>{
-                    this.$store.commit('closeLoading');
+                    this.$store.dispatch('to0').then(res=>{
+                        this.$store.commit('closeLoading');
+                    });
                 });
             }
         },

@@ -16,14 +16,13 @@
                         <h4>{{item.title}}</h4>
                         <p class="author">
                             <img src="../../assets/recommend/user.f22d3.png" alt="">
-                            <a href="#">{{item.author}}</a>
+                            <span href="">{{item.author}}</span>
                             <em>|</em>
-                            <a href="">{{item.minorCate}}</a>
+                            <span href="">{{item.minorCate}}</span>
                             <em>|</em>
                             <span>连载</span>
                         </p>
                         <p class="intro">
-
                             {{cutOut(item.shortIntro)}}
 
                         </p>
@@ -201,10 +200,10 @@
         vertical-align: top;
         margin-top:10px;
     }
-    .author a{
+    .author span{
         margin:5px 10px;
     }
-    .author img ,.author a,.author em,.author span{
+    .author img ,.author em,.author span{
         float: left;
     }
    .author em {
@@ -214,16 +213,16 @@
      .author span{
         margin:5px 10px;
     }
-    .recommendItem .author a{
-        -webkit-transition: .2s;
-        -moz-transition: .2s;
-        -ms-transition: .2s;
-        -o-transition: .2s;
-        transition: .2s;
-    }
-    .recommendItem .author a:hover{
-        color:#262626;
-    }
+    /*.recommendItem .author a{*/
+        /*-webkit-transition: .2s;*/
+        /*-moz-transition: .2s;*/
+        /*-ms-transition: .2s;*/
+        /*-o-transition: .2s;*/
+        /*transition: .2s;*/
+    /*}*/
+    /*.recommendItem .author a:hover{*/
+        /*color:#262626;*/
+    /*}*/
     .recommendItem .intro{
         line-height:24px;
         margin:5px 0;
@@ -282,8 +281,4 @@
         background: #ccc !important;
     }
 
-    .recommendItem .lastChapter{
-        color: darkblue !important;
-        cursor: pointer;
-    }
 </style>
